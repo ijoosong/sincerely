@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<title>Sample 2, Part 2</title>
+
+	<script src="../../scripts/jquery.min.js"></script>
+
+	<script type="text/javascript" src="../../scripts/js.ext.js"></script>
+
+	<script type="text/javascript" src="../../engine/Module.js"></script>
+	<script async type="text/javascript" src="../../engine/WacomInkEngine.js"></script>
+
+	<script type="text/javascript" src="Part2.js"></script>
+
+	<script type="text/javascript">
+		function saveAs(content, filename, contentType) {
+			var href;
+
+			if (content instanceof Blob)
+				href = URL.createObjectURL(content);
+			else {
+				var parts;
+
+				if (content instanceof ArrayBuffer)
+					parts = [content];
+				else if (content.buffer)
+					parts = [content.buffer];
+				else if (content instanceof Array)
+					parts = content;
+
+				blob = new Blob(parts, {"type": contentType || "application/octet-stream"});
+				href = URL.createObjectURL(blob);
+			}
+
+			var a = document.createElement("a");
+			a.href = href;
+			a.download = filename;
+
+			a.appendChild(document.createTextNode(filename));
+			a.style.display = "none";
+
+			document.body.appendChild(a);
+			a.click();
+		}
+	</script>
+
+	<style type="text/css">
+		body {position: relative; overflow: hidden; margin: 0; padding: 0; background-color: #252525; color: white;}
+		canvas {border: 0px none;}
+		h2, p {margin-left: 20px;}
+		.Button {position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; cursor: pointer;}
+		a {color: red; margin-right: 5px;}
+	</style>
+</head>
+<body>
+	<canvas id="canvas" oncontextmenu="WILL.clear(); event.preventDefault();"></canvas>
+
+	<p>
+		<a href="javascript:void(0)" style="position:relative">
+			<input type="file" class="Button" onchange="WILL.load(event); this.value = '';" />
+			LOAD
+		</a>
+		<a href="javascript:void(0)" onclick="WILL.save()">SAVE</a>
+	</p>
+
+	<h2>Sample 2, Part 2</h2>
+	<p>Stroke Serialization</p>
+</body>
+</html>

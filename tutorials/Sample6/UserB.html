@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<title>UserB</title>
+
+	<script src="../../scripts/jquery.min.js"></script>
+
+	<script type="text/javascript" src="../../scripts/js.ext.js"></script>
+
+	<script type="text/javascript" src="../../engine/Module.js"></script>
+	<script async type="text/javascript" src="../../engine/WacomInkEngine.js"></script>
+
+	<script type="text/javascript">
+		var script = document.createElement("script");
+		script.type = "text/javascript";
+		script.src = parent.window.location.pathname.substring(parent.window.location.pathname.lastIndexOf("/")+1).replace("html", "js");
+
+		document.head.appendChild(script);
+	</script>
+
+	<style type="text/css">
+		body {position: relative; overflow: hidden; margin: 0; padding: 0; background-color: #252525; color: white;}
+		canvas {border: 0px none;}
+	</style>
+</head>
+<body>
+	<canvas id="canvas" oncontextmenu="WILL.clear(); event.preventDefault();"></canvas>
+</body>
+</html>
