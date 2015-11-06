@@ -69,10 +69,12 @@ function callback(obj){
 
 function imgurify() {
   try {
-    var img = document.getElementById('myCanvas').toDataURL('image/jpeg', 0.9).split(',')[1];
+    var img = document.getElementById('canvas').toDataURL('image/jpeg', 0.9).split(',')[1];
   } catch(e) {
-    var img = document.getElementById('myCanvas').toDataURL().split(',')[1];
+    var img = document.getElementById('canvas').toDataURL().split(',')[1];
   }
+
+  var imageURL = '';
 
   $.ajax({
     url: 'https://api.imgur.com/3/image',
@@ -85,13 +87,15 @@ function imgurify() {
     },
     dataType: 'json',
     success: function(response) {
-        if(response.success) {
-            window.location = response.data.link;
-        }
+      if(response.success) {
+        imageURL = response.data.link;
+      }
     }
   });
 }
 
-function something() {
-  
+function trainSig() {
+  var url = imgurify();
+  positive(url);
+  train(url);
 }
