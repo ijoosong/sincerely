@@ -34,6 +34,13 @@ function train() {
   );
 }
 
+function posTrain(imgurl) {
+  clarifai.positive(imgurl, nombre, callback)
+  .then(function() {
+    train();
+  });
+}
+
 function predict(imgurl) {
   clarifai.predict(imgurl, nombre, callback)
   .then(function(obj) {
@@ -67,7 +74,7 @@ function callback(obj){
   console.log('callback', obj);
 }
 
-function imgurify() {
+function trainSignature() {
   var img;
   try {
     img = document.getElementById('canvas').toDataURL('image/jpeg', 0.9).split(',')[1];
@@ -90,18 +97,37 @@ function imgurify() {
     success: function(response) {
       if(response.success) {
         imageURL = response.data.link;
+        posTrain(imageURL);
       }
     }
   });
 }
 
-function trainSignature() {
-  var url = imgurify();
-  positive(url);
-  train(url);
-}
+function testSignature() {
+  var img;
+  try {
+    img = document.getElementById('canvas').toDataURL('image/jpeg', 0.9).split(',')[1];
+  } catch(e) {
+    img = document.getElementById('canvas').toDataURL().split(',')[1];
+  }
 
-function trainSignature() {
-  var url = imgurify();
-  predict(url);
+  var imageURL = '';
+
+  $.ajax({
+    url: 'https://api.imgur.com/3/image',
+    type: 'post',
+    headers: {
+        Authorization: 'Client-ID cbe0b464bdb9b8e'
+    },
+    data: {
+        image: img
+    },
+    dataType: 'json',
+    success: function(response) {
+      if(response.success) {
+        imageURL = response.data.link;
+        predict(imageURL);
+      }
+    }
+  });
 }
