@@ -10,7 +10,7 @@ $(document).ready(function() {
 });
 
 function setName() {
-  nombre = $("#new-car").val();
+  nombre = $("#name").val();
 }
 
 function positive(imgurl) {
