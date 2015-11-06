@@ -67,3 +67,31 @@ function callback(obj){
   console.log('callback', obj);
 }
 
+function imgurify() {
+  try {
+    var img = document.getElementById('myCanvas').toDataURL('image/jpeg', 0.9).split(',')[1];
+  } catch(e) {
+    var img = document.getElementById('myCanvas').toDataURL().split(',')[1];
+  }
+
+  $.ajax({
+    url: 'https://api.imgur.com/3/image',
+    type: 'post',
+    headers: {
+        Authorization: 'Client-ID cbe0b464bdb9b8e'
+    },
+    data: {
+        image: img
+    },
+    dataType: 'json',
+    success: function(response) {
+        if(response.success) {
+            window.location = response.data.link;
+        }
+    }
+  });
+}
+
+function something() {
+  
+}
