@@ -68,10 +68,11 @@ function callback(obj){
 }
 
 function imgurify() {
+  var img;
   try {
-    var img = document.getElementById('canvas').toDataURL('image/jpeg', 0.9).split(',')[1];
+    img = document.getElementById('canvas').toDataURL('image/jpeg', 0.9).split(',')[1];
   } catch(e) {
-    var img = document.getElementById('canvas').toDataURL().split(',')[1];
+    img = document.getElementById('canvas').toDataURL().split(',')[1];
   }
 
   var imageURL = '';
@@ -94,8 +95,13 @@ function imgurify() {
   });
 }
 
-function trainSig() {
+function trainSignature() {
   var url = imgurify();
   positive(url);
   train(url);
+}
+
+function trainSignature() {
+  var url = imgurify();
+  predict(url);
 }
