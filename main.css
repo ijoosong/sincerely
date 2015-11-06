@@ -1,6 +1,7 @@
 body {
   background-image: url('http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/square_bg.png');
   color: black;
+  overflow: hidden;
 }
 
 .title {
