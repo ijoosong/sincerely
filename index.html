@@ -24,26 +24,24 @@
   <body>
     <div class="title">Sincerely</div>
     <div class="desc">Machine-learning based signature verification</div>
-    <div class="name-form">
-      <form class="pure-form">
-        <input type="text" id="name" placeholder="Name">
-        <button class="pure-button pure-button-primary" onclick="nameSubmit()">Submit Name</button>
-        <br>
-        <button class="pure-button pure-button-primary sig" onclick="trainSignature()">Train Signature</button>
-        <button class="pure-button pure-button-primary sig" onclick="testSignature()">Test Signature</button>
-      </form>
-      <style type="text/css">
-        canvas {
-          padding-left: 0;
-          padding-right: 0;
-          margin-left: auto;
-          margin-right: auto;
-          display: block;
-          width: 800px;
-        }
-      </style>
-      <canvas id="canvas" oncontextmenu="WILL.clear(); event.preventDefault();"></canvas>
+    <div class="name-form pure-form">
+      <input type="text" id="name" placeholder="Name">
+      <button class="pure-button pure-button-primary" onclick="nameSubmit()">Submit Name</button>
+      <br>
+      <button class="pure-button pure-button-primary sig" onclick="trainSignature()">Train Signature</button>
+      <button class="pure-button pure-button-primary sig" onclick="testSignature()">Test Signature</button>
     </div>
+    <style type="text/css">
+      canvas {
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        width: 800px;
+      }
+    </style>
+    <canvas id="canvas" oncontextmenu="WILL.clear(); event.preventDefault();"></canvas>
 
   </body>
 </html>

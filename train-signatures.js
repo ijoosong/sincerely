@@ -9,7 +9,7 @@ $(document).ready(function() {
   });
 });
 
-function setName() {
+function nameSubmit() {
   nombre = $("#name").val();
 }
 
