@@ -2,8 +2,6 @@ var WILL = {
 	backgroundColor: Module.color.WHITE,
 	color: Module.color.from(204, 204, 204),
 
-	strokes: new Array(),
-
 	init: function(width, height) {
 		this.initInkEngine(width, height);
 		this.initEvents();
@@ -15,15 +13,15 @@ var WILL = {
 
 		this.clear();
 
-		this.brush = new Module.SolidColorBrush();
+		this.brush = new Module.DirectBrush();
 
 		this.pathBuilder = new Module.SpeedPathBuilder();
-		this.pathBuilder.setNormalizationConfig(5, 210);
-		this.pathBuilder.setPropertyConfig(Module.PropertyName.Width, 1, 3.2, NaN, NaN, Module.PropertyFunction.Sigmoid, 0.6, true);
+		this.pathBuilder.setNormalizationConfig(182, 3547);
+		this.pathBuilder.setPropertyConfig(Module.PropertyName.Width, 2.05, 34.53, 0.72, NaN, Module.PropertyFunction.Power, 1.19, false);
 
 		this.smoothener = new Module.MultiChannelSmoothener(this.pathBuilder.stride);
 
-		this.strokeRenderer = new Module.StrokeRenderer(this.canvas);
+		this.strokeRenderer = new Module.StrokeRenderer(this.canvas, this.strokesLayer);
 		this.strokeRenderer.configure({brush: this.brush, color: this.color});
 	},
 
@@ -32,13 +30,22 @@ var WILL = {
 		$(Module.canvas).on("mousedown", function(e) {self.beginStroke(e);});
 		$(Module.canvas).on("mousemove", function(e) {self.moveStroke(e);});
 		$(document).on("mouseup", function(e) {self.endStroke(e);});
+
+		Module.canvas.addEventListener("touchstart", function(e) {self.beginStroke(e);});
+		Module.canvas.addEventListener("touchmove", function(e) {self.moveStroke(e);});
+		document.addEventListener("touchend", function(e) {self.endStroke(e);});
+
+		document.ontouchmove = function(е) {
+			е.preventDefault();
+		}
 	},
 
 	beginStroke: function(e) {
-		if (e.button != 0) return;
+		if (["mousedown", "mouseup"].contains(e.type) && e.button != 0) return;
 
 		this.inputPhase = Module.InputPhase.Begin;
 
+		if (e.changedTouches) e = e.changedTouches[0];
 		this.buildPath({x: e.clientX, y: e.clientY});
 
 		this.strokeRenderer.draw(this.pathPart, false);
@@ -49,6 +56,7 @@ var WILL = {
 		if (!this.inputPhase) return;
 
 		var self = this;
+		if (e.changedTouches) e = e.changedTouches[0];
 		this.pointerPos = {x: e.clientX, y: e.clientY};
 
 		this.inputPhase = Module.InputPhase.Move;
@@ -69,12 +77,11 @@ var WILL = {
 		this.buildPath(this.pointerPos);
 
 		this.strokeRenderer.draw(this.pathPart, false);
-		this.strokeRenderer.drawPreliminary(this.preliminaryPathPart);
-
-		this.canvas.clearArea(this.strokeRenderer.updatedArea, this.backgroundColor);
-		this.canvas.blendWithRect(this.strokesLayer, this.strokeRenderer.updatedArea, Module.BlendMode.NORMAL);
-
 		this.strokeRenderer.blendUpdatedArea();
+
+		this.strokeRenderer.color = Module.color.RED;
+		this.strokeRenderer.drawPreliminary(this.preliminaryPathPart);
+		this.strokeRenderer.color = this.color;
 	},
 
 	endStroke: function(e) {
@@ -84,16 +91,13 @@ var WILL = {
 		clearInterval(this.intervalID);
 		delete this.intervalID;
 
+		if (e.changedTouches) e = e.changedTouches[0];
 		this.buildPath({x: e.clientX, y: e.clientY});
 
 		this.strokeRenderer.draw(this.pathPart, true);
-		this.strokeRenderer.blendStroke(this.strokesLayer, Module.BlendMode.NORMAL);
+		this.strokeRenderer.blendUpdatedArea();
 
-		this.canvas.clearArea(this.strokeRenderer.updatedArea, this.backgroundColor);
-		this.canvas.blendWithRect(this.strokesLayer, this.strokeRenderer.updatedArea, Module.BlendMode.NORMAL);
-
-		var stroke = new Module.Stroke(this.brush, this.path, NaN, this.color, 0, 1);
-		this.strokes.push(stroke);
+		this.canvas.blendWithMode(this.strokesLayer, Module.BlendMode.NONE); ///////////
 
 		delete this.inputPhase;
 	},
@@ -107,7 +111,6 @@ var WILL = {
 		var pathContext = this.pathBuilder.addPathPart(smoothedPathPart);
 
 		this.pathPart = pathContext.getPathPart();
-		this.path = pathContext.getPath();
 
 		var preliminaryPathPart = this.pathBuilder.createPreliminaryPath();
 		var preliminarySmoothedPathPart = this.smoothener.smooth(preliminaryPathPart, true);
@@ -116,8 +119,6 @@ var WILL = {
 	},
 
 	clear: function() {
-		this.strokes = new Array();
-
 		this.strokesLayer.clear(this.backgroundColor);
 		this.canvas.clear(this.backgroundColor);
 	}

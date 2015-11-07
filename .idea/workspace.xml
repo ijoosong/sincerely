@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2435ca02-aec6-4227-8667-61f68718dc8c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/train.html" afterPath="$PROJECT_DIR$/train.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/train.js" afterPath="$PROJECT_DIR$/train.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="sincerely.iws" />
@@ -26,11 +25,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.80254775">
-              <caret line="42" column="8" selection-start-line="42" selection-start-column="8" selection-end-line="42" selection-end-column="8" />
+            <state vertical-scroll-proportion="-12.156863">
+              <caret line="42" column="12" selection-start-line="42" selection-start-column="12" selection-end-line="42" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Part4.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tutorials/Sample1/Part4.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Part4.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tutorials/Sample1/Part4.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="20" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="128" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="train.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/train.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="2.2966506">
+              <caret line="128" column="3" selection-start-line="128" selection-start-column="3" selection-end-line="128" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -39,7 +68,7 @@
       <file leaf-file-name="js.ext.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/js.ext.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="111.0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
@@ -61,8 +90,8 @@
       <file leaf-file-name="Module.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/engine/Module.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="-14.555555">
+              <caret line="719" column="12" selection-start-line="719" selection-start-column="12" selection-end-line="719" selection-end-column="12" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -100,38 +129,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="train.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/train.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.625">
-              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="21" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="train.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/train.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="train-signatures.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/train-signatures.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="89" column="6" selection-start-line="89" selection-start-column="6" selection-end-line="89" selection-end-column="6" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="Git.Settings">
@@ -143,6 +140,7 @@
         <option value="$PROJECT_DIR$/train-signatures.js" />
         <option value="$PROJECT_DIR$/train.html" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/train.js" />
       </list>
     </option>
   </component>
@@ -229,7 +227,39 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Sample2" />
+              <option name="myItemId" value="Sample3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sincerely" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sincerely" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tutorials" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Sample1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sincerely" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sincerely" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -310,22 +340,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/train.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="21" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/verify.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="27" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/train.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -352,22 +366,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/train.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="21" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/verify.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="27" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/train.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -386,26 +384,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/verify.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="27" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/train.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/train-signatures.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="89" column="6" selection-start-line="89" selection-start-column="6" selection-end-line="89" selection-end-column="6" />
+          <caret line="115" column="6" selection-start-line="115" selection-start-column="6" selection-end-line="115" selection-end-column="6" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
@@ -421,22 +403,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tutorials/Sample6/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/train.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.625">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="21" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/js.ext.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -464,18 +430,50 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/engine/Module.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="-14.555555">
+          <caret line="719" column="12" selection-start-line="719" selection-start-column="12" selection-end-line="719" selection-end-column="12" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/js.ext.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="111.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.80254775">
-          <caret line="42" column="8" selection-start-line="42" selection-start-column="8" selection-end-line="42" selection-end-column="8" />
+        <state vertical-scroll-proportion="-12.156863">
+          <caret line="42" column="12" selection-start-line="42" selection-start-column="12" selection-end-line="42" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tutorials/Sample1/Part4.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tutorials/Sample1/Part4.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="128" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/train.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.2966506">
+          <caret line="128" column="3" selection-start-line="128" selection-start-column="3" selection-end-line="128" selection-end-column="3" />
           <folding />
         </state>
       </provider>
